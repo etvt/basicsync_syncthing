@@ -129,3 +129,7 @@ func (m *Internals) RemoteNeedFolderFiles(folder string, device protocol.DeviceI
 func (m *Internals) LocalChangedFolderFiles(folder string, page, perpage int) ([]protocol.FileInfo, error) {
 	return m.model.LocalChangedFolderFiles(folder, page, perpage)
 }
+
+func (m *Internals) ConnectionStats() map[string]interface{} {
+	return m.model.ConnectionStats()
+}
